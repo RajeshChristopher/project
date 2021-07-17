@@ -1,0 +1,36 @@
+.container{
+    margin-top: 5.0em;
+    margin-bottom: 5.0em;
+    text-align: center;
+}
+
+
+h1{
+    padding-top: 1.0em;
+    padding-bottom: 1.0em;
+    text-align: center;
+    background-color: violet;
+}
+
+label{
+    padding: auto;
+}
+
+
+.image-preview{
+    width: 300px;
+    min-height: 100px;
+    border: 2px solid #dddddd;
+    margin: 15px auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #cc521a;
+}
+
+.image-preview__image{
+    display: none;
+    width: 100%;
+}

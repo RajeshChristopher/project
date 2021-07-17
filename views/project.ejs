@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <title>Expense Aprroval For Vehicle Insurance</title>
+        <link rel="stylesheet" type="text/css" href="/stylesheets/app.css">
+    </head>
+    <body>
+        <h1>Expense Aprroval For Vehicle Insurance</h1>
+        <div class="container">
+            <form action="" method="POST">
+                <label for="firstname">First Name:</label>
+                <input type="text" id="firstname" name="firstname" required><br><br>
+
+                <label for="lastname">Last Name:</label>
+                <input type="text" id="lastname" name="lastname" required><br><br>
+
+                <label for="registration-number">Registration Number:</label>
+                <input type="text" id="registration-number" name="registeration-number" required><br><br>
+
+                <label for="address">Address:</label>
+                <textarea id="address" rows="5" cols="33" required></textarea><br><br>
+
+                <label for="date">Date:</label>
+                <input type="date" name="date" id="date" required><br><br>
+
+                <label for="image">Image:</label>
+                <input type="file" name="image" id="image" required><br>
+                <div class="image-preview" id="imagePreview">
+                    <img src="" alt="Image Preview" class="image-preview__image">
+                    <span class="image-preview__default-text">Image Preview</span><br><br>
+                </div>
+
+                <input type="submit" value="Claim Status Check">
+
+            </form>
+        </div>
+        <script>
+            const inpFile = document.getElementById("image");
+            const previewContainer = document.getElementById("imagePreview");
+            const previewImage = previewContainer.querySelector(".image-preview__image");
+            const previewDefaultText = previewContainer.querySelector(".image-preview__default-text");
+
+            inpFile.addEventListener("change",function(){
+                const file = this.files[0];
+
+                if(file){
+                    const reader = new FileReader();
+
+                    previewDefaultText.style.display = "none";
+                    previewImage.style.display = "block";
+                    
+                    reader.addEventListener("load",function(){
+                        previewImage.setAttribute("src",this.result);
+                    });
+
+                    reader.readAsDataURL(file);
+                }
+                else{
+                    previewDefaultText.style.display = null;
+                    previewImage.style.display = null;
+                    previewImage.setAttribute("src","");
+                }
+            });
+        </script>
+    </body>
+</html>
