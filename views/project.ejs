@@ -6,28 +6,74 @@
     <body>
         <h1>Expense Aprroval For Vehicle Insurance</h1>
         <div class="container">
-            <form action="" method="POST">
+            <form action="/" method="POST">
                 <label for="firstname">First Name:</label>
                 <input type="text" id="firstname" name="firstname" required><br><br>
 
                 <label for="lastname">Last Name:</label>
                 <input type="text" id="lastname" name="lastname" required><br><br>
 
-                <label for="registration-number">Registration Number:</label>
+                <label for="registration-number">Policy Number:</label>
+                <input type="text" id="registration-number" name="registeration-number" required><br><br>
+
+                <label for="registration-number">Vehicle Registration Number:</label>
                 <input type="text" id="registration-number" name="registeration-number" required><br><br>
 
                 <label for="address">Address:</label>
                 <textarea id="address" rows="5" cols="33" required></textarea><br><br>
 
                 <label for="date">Date:</label>
-                <input type="date" name="date" id="date" required><br><br>
+                <input type="date" name="date" id="date" max="2021-07-18" required><br><br>
 
-                <label for="image">Image:</label>
+                <label for="time">Time:</label>
+                <input type="time" name="time" id="time" required><br><br>
+
+                <label for="gender">Gender:</label>
+                <input type="radio" name="gender" id="genderMale" value="Male">
+                <label for="genderMale">Male </label>
+                <input type="radio" name="gender" id="genderFemale" value="Female">
+                <label for="genderFemale">Female </label><br><br>
+
+                <label for="licenseNumber">License Number:</label>
+                <input type="number" name="licenseNumber" id="licenseNumber" required><br><br>
+
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" required><br><br>
+
+                <label for="mobilenumber">Mobile Number:</label>
+                <input type="number" name="mobilenumber" id="mobilenumber" maxlength="10" required><br><br>
+
+                <label for="location">Incident Location:</label>
+                <input type="text" name="location" id="location" required><br><br>
+
+                <label for="estimation">Estimated Loss Amount</label>
+                <input type="number" name="estimation" id="estimation" min="0" required><br><br>
+
+                <label for="incidentDescription">Incident Description:</label>
+                <textarea id="incidentDescription" rows="7" cols="40" required></textarea><br><br>
+
+                <label for="police">Reported To Police:</label>
+                <input type="radio" name="policeReport" id="yesPoliceReport" value="Yes">
+                <label for="yesPoliceReport">Yes </label>
+                <input type="radio" name="policeReport" id="noPoliceReport" value="No">
+                <label for="noPoliceReport">No </label><br><br>
+
+                <label for="image">Vehicle Damage Image:</label>
                 <input type="file" name="image" id="image" required><br>
                 <div class="image-preview" id="imagePreview">
                     <img src="" alt="Image Preview" class="image-preview__image">
                     <span class="image-preview__default-text">Image Preview</span><br><br>
                 </div>
+
+
+                <label for="DLimage">Driving License Upload:</label>
+                <input type="file" name="DLimage" id="DLimage" required><br><br>
+
+                <label for="RCimage">Vehicle RC Upload:</label>
+                <input type="file" name="RCimage" id="RCimage" required><br><br>
+
+                <label for="VLimage">Vehicle License Plate Upload:</label>
+                <input type="file" name="VLimage" id="VLimage" required><br><br>
 
                 <input type="submit" value="Claim Status Check">
 
